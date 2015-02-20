@@ -1,0 +1,108 @@
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #EEE;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#mainNav {
+  border-bottom: 1px solid #DDD;
+}
+
+.row ul li {
+  padding: 5px 0;
+  font-size: 1.3em;
+  color: #DDD;
+}
+
+#createNew {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+}
+
+#createNew i {
+  color: #EE3A8C;
+  opacity: 0.75;
+}
+
+#createNew i:hover {
+  opacity: 1;
+}
+
+#newEntryTitle {
+  padding-top: 3em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+
+#journeyTitle.form-control,
+#journeyDescription.form-control,
+#journeyYear.form-control,
+#journeyLocation.form-control,
+#journeyPhoto.form-control {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px dashed #000;
+  font-size: 16px;
+}
+
+#journeyYear.form-control,
+#journeyLocation.form-control,
+#journeyPhoto.form-control {
+  border-bottom: none;
+  margin: 5px 0;
+}
+
+#journeyTitle.form-control[placeholder],
+#journeyDescription.form-control[placeholder],
+#journeyYear.form-control[placeholder],
+#journeyLocation.form-control[placeholder],
+#journeyPhoto.form-control[placeholder]{
+  font-style: italic;
+}
+
+#journeyDescription.form-control {
+   resize: none;
+}
+
+.year,
+.location,
+.photo {
+  display: inline;
+}
+
+.year span i,
+.location span i,
+.photo span i {
+  float: right;
+  font-size: 1.2em;
+  vertical-align: middle;
+  top: 6px;
+  right: 10px
+}
+
+#newEntryDetails {
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+#create {
+  margin: 2em 0;
+  border: 0;
+}
+
+#create:hover {
+  background: #000;
+  border-radius: 0;
+  color: #FFF;
+}
