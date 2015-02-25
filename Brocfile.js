@@ -2,11 +2,14 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
-
 var app = new EmberApp({
   dotEnv: {
     clientAllowedKeys: ['ADAPTER_URL']
+  },
+  vendorFiles: {
+    'handlebars.js': {
+      production: 'bower_components/handlebars/handlebars.js'
+    }
   }
 });
 
