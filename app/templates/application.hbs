@@ -6,18 +6,22 @@
 <div class="container wrap">
   <div id="mainNav" class="row col-sm-6 col-sm-offset-3">
     <ul class="list-unstyled">
-      <li class="col-sm-4 text-center">
+      <li id="entriesAll" class="col-sm-4 text-center">
+        {{#link-to 'entries'}}
         <i class="glyphicon glyphicon-th"></i>
+        {{/link-to}}</li>
       </li>
       <li id="createNew" class="col-sm-4 text-center">
         {{#link-to 'entries.new'}}
         <i class="glyphicon glyphicon-plus"></i>
         {{/link-to}}</li>
-      <li class="col-sm-4"></li>
+      <li class="col-sm-4" class="col-sm-4 text-center">
+        <i class="glyphicon glyphicon-heart"></i>
+      </li>
     </ul>
   </div>
 
-  <div class="row col-sm-6 col-sm-offset-3">
+  <div class="row col-sm-8 col-sm-offset-2">
     {{outlet}}
   </div>
 </div>

@@ -1,1 +1,10 @@
+{{#each entry in model}}
+<div class="entries col-sm-4 text-center">
+    <img class="pic" {{bind-attr src=entry.photo_url}}>
+    {{#link-to 'entries.show' classNames="entry-name"}}{{entry.title}}{{/link-to}}
+</div>
+{{/each}}
+
+<div class="row col-sm-8 col-sm-offset-2">
 {{outlet}}
+</div>

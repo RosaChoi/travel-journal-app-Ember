@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
     createEntry: function() {
       this.get('model').save();
       this.set('model', '');
-      this.set('message', 'Successfully created a journal!')
+      this.set('message', 'Successfully created a journal!');
     }
   }
 });

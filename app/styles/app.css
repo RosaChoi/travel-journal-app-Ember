@@ -34,7 +34,13 @@ h3 {
   opacity: 0.75;
 }
 
-#createNew i:hover {
+#entriesAll i {
+  color: #000;
+  opacity: 0.45;
+}
+
+#createNew i:hover,
+#entriesAll i:hover {
   opacity: 1;
 }
 
@@ -105,4 +111,31 @@ h3 {
   background: #000;
   border-radius: 0;
   color: #FFF;
+}
+
+.entries {
+  padding: 20px;
+}
+
+.pic {
+  width: 240px;
+  max-height: 160px;
+}
+
+.entry-name {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 200;
+  z-index: 5;
+  text-align: center;
+  position: absolute;
+  top: 93px;
+  left: 39px;
+  color: #FFF
+}
+
+.entry-name:hover {
+  color: #FFF;
+  opacity: 0.5;
+  text-decoration: none;
 }
