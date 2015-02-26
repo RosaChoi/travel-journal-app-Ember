@@ -1,0 +1,40 @@
+<div class="text-center">
+  <span class="cancel">{{#link-to 'entries'}}<i class="glyphicon glyphicon-remove"></i>{{/link-to}}</span>
+</div>
+
+<div id="newEntryTitle">
+  <h1 class="text-center">New Entry</h1>
+</div>
+
+<div class="new-entry-input">
+  {{input value=model.title placeholder="Title" id="journeyTitle" class="form-control"}}
+  {{input value=model.username placeholder="Author/Username" id="journeyUsername" class="form-control"}}
+  {{textarea name=description value=model.description placeholder="Write here..." id="journeyDescription" cols="40" rows="8" class="form-control"}}
+</div>
+
+<div id="newEntryDetails">
+  <div class="year">
+    <div class="col-sm-10">
+      {{input value=model.year placeholder="Year" id="journeyYear" class="form-control"}}
+    </div>
+    <span class="pull-right"><i class="glyphicon glyphicon-calendar"></i></span>
+  </div>
+  <div class="location">
+    <div class="col-sm-10">
+      {{input value=model.location placeholder="Location" id="journeyLocation" class="form-control"}}
+    </div>
+    <span class="pull-right"><i class="glyphicon glyphicon-map-marker"></i></span>
+  </div>
+  <div class="photo">
+    <div class="col-sm-10">
+      {{input value=model.photo_url placeholder="Photo URL" id="journeyPhoto" class="form-control"}}
+    </div>
+    <span class="pull-right"><i class="glyphicon glyphicon-camera"></i></span>
+  </div>
+</div>
+
+<div class="row message alert alert-success" role="alert">
+  <p>{{message}}</p>
+</div>
+
+<button id="create" class="btn btn-default btn-block"{{action 'createEntry'}}>Add Travel Journal Entry</button>

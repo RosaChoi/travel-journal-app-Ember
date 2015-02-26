@@ -15,7 +15,12 @@ h3 {
 }
 
 #mainNav {
+  margin-top: 0;
   border-bottom: 1px solid #DDD;
+}
+
+.row {
+  margin-top: 2em;
 }
 
 .row ul li {
@@ -45,12 +50,16 @@ h3 {
 }
 
 #newEntryTitle {
-  padding-top: 3em;
   padding-bottom: 10px;
   border-bottom: 2px solid #000;
 }
 
+.form-control {
+  height: 45px;
+}
+
 #journeyTitle.form-control,
+#journeyUsername.form-control,
 #journeyDescription.form-control,
 #journeyYear.form-control,
 #journeyLocation.form-control,
@@ -70,6 +79,7 @@ h3 {
 }
 
 #journeyTitle.form-control[placeholder],
+#journeyUsername.form-control[placeholder],
 #journeyDescription.form-control[placeholder],
 #journeyYear.form-control[placeholder],
 #journeyLocation.form-control[placeholder],
@@ -138,4 +148,55 @@ h3 {
   color: #FFF;
   opacity: 0.5;
   text-decoration: none;
+}
+
+.cancel a i {
+  font-size: 1.5em;
+  color: #000;
+  opacity: 0.6;
+}
+
+.cancel a i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#contentHeader {
+  border-bottom: 2px solid #000;
+  padding: 0 50px;
+}
+#info-section ul li,
+#details-section ul li {
+  display: inline;
+  color: #000;
+  font-size: 16px;
+}
+
+#info-section,
+#details-section,
+#comments-section {
+  border-bottom: 1px dashed #000;
+  margin-top: 1em;
+}
+
+#details-section,
+#comments-section {
+  border-top: 2px solid #000;
+}
+
+#details-section ul li,
+#comments-section ul li {
+  margin: 0 20px;
+}
+
+#details-section ul {
+  margin-bottom: 0;
+}
+
+.show-picture {
+  width: 380px;
+}
+.text {
+  padding: 10px;
+  line-height: 1.5;
 }

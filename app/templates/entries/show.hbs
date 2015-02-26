@@ -1,1 +1,33 @@
-{{outlet}}
+<div id="contentHeader" class="row">
+  <h1 class="text-center">{{model.title}}</h1>
+</div>
+
+<div id="info-section" class="row">
+  <ul class="list-unstyled">
+    <li class="author">by {{model.username}}</li>
+    <li><i class="glyphicon glyphicon-comment"></i></li>
+    <li><i class="glyphicon glyphicon-heart pull-right"></i></li>
+  </ul>
+</div>
+
+<div class="row travel-picture">
+  <img class="show-picture" {{bind-attr src=model.photo_url}} />
+  <img class="show-picture" {{bind-attr src=model.photo_url}} />
+</div>
+
+<div id="details-section" class="row">
+  <ul class="list-unstyled">
+    <li class="pull-left">{{model.year}}</li>
+    <li class="pull-right">{{model.location}}</li>
+  </ul>
+</div>
+
+<div id="description-section" class="row">
+  <p class="text">{{model.description}}</p>
+</div>
+
+<div id="comments-section" class="row">
+  <ul class="list-unstyled">
+    <li>Comments</li>
+  </ul>
+</div>
