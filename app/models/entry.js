@@ -6,5 +6,6 @@ export default DS.Model.extend({
   location: DS.attr('string'),
   description: DS.attr('string'),
   photo_url: DS.attr('string'),
-  year: DS.attr('string')
+  year: DS.attr('string'),
+  comments: DS.hasMany('comment')
 });
