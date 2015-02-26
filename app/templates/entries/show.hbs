@@ -29,8 +29,7 @@
 <div id="menu-section" class="row">
   <ul class="list-unstyled">
     <li class="col-sm-6 text-center">{{#link-to 'entries.edit' model}}EDIT{{/link-to}}</li>
-
-    <li class="col-sm-6 text-center">DELETE</li>
+    <li class="col-sm-6 text-center"><a {{action 'deleteEntry' model}}>DELETE</a></li>
   </ul>
 </div>
 
