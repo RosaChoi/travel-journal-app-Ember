@@ -4,15 +4,15 @@
 
 <div id="info-section" class="row">
   <ul class="list-unstyled">
-    <li class="author">by {{model.username}}</li>
-    <li><i class="glyphicon glyphicon-comment"></i></li>
-    <li><i class="glyphicon glyphicon-heart pull-right"></i></li>
+    <li class="author col-sm-6">By {{model.username}}</li>
+    <li class="col-sm-2"><i class="glyphicon glyphicon-comment"></i></li>
+    <li class="col-sm-2 pull-right"><i class="glyphicon glyphicon-heart"></i></li>
   </ul>
 </div>
 
 <div class="row travel-picture">
   <img class="show-picture" {{bind-attr src=model.photo_url}} />
-  <img class="show-picture" {{bind-attr src=model.photo_url}} />
+  <!-- <img class="show-picture" {{bind-attr src=model.photo_url}} /> -->
 </div>
 
 <div id="details-section" class="row">
@@ -26,8 +26,18 @@
   <p class="text">{{model.description}}</p>
 </div>
 
+<div id="menu-section" class="row">
+  <ul class="list-unstyled">
+    <li class="col-sm-6 text-center">{{#link-to 'entries.edit' model}}EDIT{{/link-to}}</li>
+
+    <li class="col-sm-6 text-center">DELETE</li>
+  </ul>
+</div>
+
 <div id="comments-section" class="row">
   <ul class="list-unstyled">
-    <li>Comments</li>
+    <li class="col-sm-6"><strong>Comments</strong></li>
+    <li class="col-sm-2 view-comments"><i class="glyphicon glyphicon-comment"></i> View Comments</li>
+    <li class="col-sm-2 pull-right write-comments"><i class="glyphicon glyphicon-pencil"></i> Write comments</li>
   </ul>
 </div>
