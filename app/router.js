@@ -9,8 +9,9 @@ Router.map(function() {
   this.resource('entries', function() {
     this.route('new');
     this.route('edit', {path: '/:entry_id/edit'});
-    this.route('show', {path: '/:entry_id'});
-
+    this.route('show', {path: '/:entry_id'}, function() {
+      this.route('comments');
+    });
   });
 });
 

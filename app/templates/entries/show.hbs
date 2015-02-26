@@ -1,3 +1,5 @@
+{{log model}}
+
 <div id="contentHeader" class="row">
   <h1 class="text-center">{{model.title}}</h1>
 </div>
@@ -36,7 +38,12 @@
 <div id="comments-section" class="row">
   <ul class="list-unstyled">
     <li class="col-sm-6"><strong>COMMENTS</strong></li>
-    <li class="col-sm-2 view-comments"><i class="glyphicon glyphicon-comment"></i> View Comments</li>
     <li class="col-sm-2 pull-right write-comments"><i class="glyphicon glyphicon-pencil"></i> Write comments</li>
+    {{#each comment in model.comments}}
+      {{comment.username}}
+      {{comment.body}}
+    {{/each}}
   </ul>
 </div>
+
+{{outlet}}
