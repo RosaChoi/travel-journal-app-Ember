@@ -3,8 +3,12 @@
 </div>
 
 {{#each entry in model}}
-<div class="entries col-sm-4 text-center">
+  <div class="entries col-sm-4 text-center">
     <img class="pic" {{bind-attr src=entry.photo_url}}>
     {{#link-to 'entries.show' entry classNames="entry-name"}}{{entry.title}}{{/link-to}}
-</div>
+    <div class="count-wrapper">
+      <span class="comment-count">{{entry.comments.length}} <i class="glyphicon glyphicon-comment"></i></span>
+      <span class="like-count">{{entry.like}} <i class="glyphicon glyphicon-heart"></i></span>
+    </div>
+  </div>
 {{/each}}
