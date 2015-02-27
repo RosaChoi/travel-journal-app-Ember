@@ -9,5 +9,6 @@ export default DS.Model.extend({
   year: DS.attr('string'),
   latitude: DS.attr('number'),
   longitude: DS.attr('number'),
-  comments: DS.hasMany('comment')
+  like: DS.attr('number'),
+  comments: DS.hasMany('comment')  
 });
