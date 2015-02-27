@@ -1,0 +1,5 @@
+<div class="new-entry-input">
+  {{input value=model.username placeholder="username" id="commentUsername" class="form-control"}}
+  {{textarea value=model.body  placeholder="Write a comment..." id="commentBody" cols="40" rows="8" class="form-control"}}
+</div>
+<button id="createComment" class="btn btn-default btn-block"{{action 'saveComment' model}}>Submit</button>

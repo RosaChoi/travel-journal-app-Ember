@@ -14,13 +14,16 @@
 
 <div class="row travel-picture">
   <img class="show-picture" {{bind-attr src=model.photo_url}} />
+  <div id="map">{{google-map model=mapConfiguration}}</div>
+
+
   <!-- <img class="show-picture" {{bind-attr src=model.photo_url}} /> -->
 </div>
 
 <div id="details-section" class="row">
   <ul class="list-unstyled">
     <li class="pull-left">{{model.year}}</li>
-    <li class="pull-right">{{model.location}}</li>
+    <li class="pull-right"><i class="glyphicon glyphicon-map-marker" {{action 'toggleMap' model}}></i> {{model.location}}</li>
   </ul>
 </div>
 
@@ -38,12 +41,11 @@
 <div id="comments-section" class="row">
   <ul class="list-unstyled">
     <li class="col-sm-6"><strong>COMMENTS</strong></li>
-    <li class="col-sm-2 pull-right write-comments"><i class="glyphicon glyphicon-pencil"></i> Write comments</li>
-    {{#each comment in model.comments}}
-      {{comment.username}}
-      {{comment.body}}
-    {{/each}}
+    <li class="col-sm-2 pull-right write-comments">{{#link-to 'comments.new'}}<i class="glyphicon glyphicon-pencil"></i> Write comments{{/link-to}}</li>
+    <li class="col-sm-2 pull-right view-comments">{{#link-to 'comments.index'}}<i class="glyphicon glyphicon-comment"></i> View comments{{/link-to}}</li>
   </ul>
 </div>
 
-{{outlet}}
+<div id="commentsView" class="row">
+  {{outlet}}
+</div>

@@ -1,6 +1,11 @@
 {{#each comment in model.comments}}
-  <li>
-    <strong>{{comment.username}}</strong> - {{comment.body}}
-  
+<ul class="list-unstyled comments-view">
+  <li><strong>{{comment.username}}</strong></li>
+  <li>{{comment.body}}
+    <span class="pull-right">
+      {{#link-to "comments.edit" comment}}<i class="glyphicon glyphicon-edit" ></i>{{/link-to}}
+      <i class="glyphicon glyphicon-trash" {{action "deleteComment" comment}}></i>
+    </span>
   </li>
+</ul>
 {{/each}}

@@ -10,7 +10,10 @@ Router.map(function() {
     this.route('new');
     this.route('edit', {path: '/:entry_id/edit'});
     this.route('show', {path: '/:entry_id'}, function() {
-      this.route('comments');
+      this.resource('comments', function(){
+        this.route('new');
+        this.route('edit', {path: '/:comment_id/edit'});
+      });
     });
   });
 });
